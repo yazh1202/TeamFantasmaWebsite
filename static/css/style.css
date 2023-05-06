@@ -1,0 +1,100 @@
+.container-fluid {
+    padding: 0px;
+}
+
+.main-body {
+    height: 1100px;
+    background-color: #f5f9f7;
+}
+
+.navbar {
+    background-color: #338573;
+}
+
+.navbar-brand {
+    color: white;
+    font-family: Poppins;
+    font-size: 70px;
+    letter-spacing: 2px;
+}
+
+.search-bar {
+    margin-top: 50px;
+    display: flex;
+    background-color: #f5f9f7;
+}
+
+.search-box {
+    background-color: #f5f9f7;
+    height: 70px;
+    width: 700px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.search-btn {
+    background-color: #338573;
+    width: 150px;
+    height: 70px;
+    margin-top: 10px;
+    color: whitesmoke;
+    border-radius: 20px;
+}
+
+.tagline {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.tag-text {
+    color: #338573;
+}
+
+.body-tag-text {
+    color: grey;
+    font-size: 30px;
+    font-family: poppins;
+    margin-top: 50px;
+}
+
+.result-div {
+    background-color: #f5f9f7;
+}
+
+.result-body {
+    margin: 70px;
+    height: 900px;
+    border-radius: 30px;
+    background-color: #f5f9f7;
+}
+
+.card {
+    border-radius: 30px;
+}
+
+.company-detail {
+    height: 400px;
+    background-color: #338573;
+}
+
+.company-title {
+    font-size: 70px;
+    font-family: poppins;
+}
+
+.cmp-img {
+    height: 150px;
+    width: 300px;
+}
+
+.cmp-img-sp {
+    height: 150px;
+    width: 150px;
+}
+
+.footer {
+    background-color: #202020;
+    color: grey;
+    height: 100px;
+}

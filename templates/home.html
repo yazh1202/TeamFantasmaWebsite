@@ -1,0 +1,143 @@
+{% extends "base.html" %} {% block title %} Fantasma {% endblock %} {% block content %}
+<nav class="navbar mt-1">
+    <div class="container-fluid">
+        <h3 class="navbar-brand">TeamFantasma Website!!</h3>
+    </div>
+</nav>
+<div>
+    <!-- <h4>{{utc_dt}}</h4> -->
+    <div class="row m-1 main-body">
+        <!--Div of Search  bar-->
+        <div class="col-lg-5 bg-light p-2 justify-content-center ">
+            <div class="row align-item-center justify-content-center">
+                <div class="tagline mt-4">
+                    Let's make <span class="tag-text">talent</span> <br><span class="tag-text"> meet</span> opportunity
+                </div>
+            </div>
+            <div class="row align-item-center justify-content-center">
+                <div class="search-bar">
+                    <input type="text" class="search-box p-2" placeholder="Search here">
+                    <button class="btn search-btn">Search</button>
+                </div>
+            </div>
+
+            <div class="row align-item-center justify-content-center">
+                <div class="body-tag-text">
+                    Find jobs that meet your requirements, matches your skillsets and <br> challenge your abilities
+                </div>
+            </div>
+        </div>
+
+        <!--Div of Result Body-->
+        <div class="col-lg-7 result-div p-2 ">
+            <div class=" result-body m-3 p-2">
+                {% for job in jobs %}
+                <!--card body started-->
+                <div class="card p-1 mt-2 border border-rounded shadow">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class=" col-10">
+                                <h5 class="card-title">{{ job.job_name }}</h5>
+                                <h5 class="card-title">{{ job.company_name }}</5>
+                                    <h5 class="card-title">{{ job.link }}</5>
+                            </div>
+                            <div class="col-2">
+                                <div class="align-item-center justify-content-center align-item-center mt-4">
+                                    <button class="btn search-btn">Apply</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                <!--card body started-->
+                <div class="card p-1 mt-2 border border-rounded shadow">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class=" col-10">
+                                <h5 class="card-title">Job Name</5>
+                                    <h5 class="card-title">Role</5>
+                                        <h5 class="card-title">Job Location</5>
+                            </div>
+                            <div class="col-2">
+                                <div class="align-item-center justify-content-center align-item-center mt-4">
+                                    <button class="btn search-btn">Apply</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--card body started-->
+                <div class="card p-1 mt-2 border border-rounded shadow">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class=" col-10">
+                                <h5 class="card-title">Job Name</5>
+                                    <h5 class="card-title">Role</5>
+                                        <h5 class="card-title">Job Location</5>
+                            </div>
+                            <div class="col-2">
+                                <div class="align-item-center justify-content-center align-item-center mt-4">
+                                    <button class="btn search-btn">Apply</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--card body started-->
+                <div class="card p-1 mt-2 border border-rounded shadow">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class=" col-10">
+                                <h5 class="card-title">Job Name</5>
+                                    <h5 class="card-title">Role</5>
+                                        <h5 class="card-title">Job Location</5>
+                            </div>
+                            <div class="col-2">
+                                <div class="align-item-center justify-content-center align-item-center mt-4">
+                                    <button class="btn search-btn">Apply</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar company-detail">
+        <div class="col">
+            <div class="row justify-content-center">
+                <h3 class="company-title">Companies that are hiring!!</h3>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="d-flex mt-3">
+                    <div>
+                        <img class="cmp-img p-2 m-4" src="../static/assets/images/netflix.png" alt="Try" />
+                        <img class="cmp-img p-2 m-4" src="../static/assets/images/microsoft.png" alt="Try" />
+                        <img class="cmp-img p-2 m-4" src="../static/assets/images/google.png" alt="Try" />
+                        <img class="cmp-img-sp p-2 m-4" src="../static/assets/images/spotify.png" alt="Try" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid footer d-flex justify-content-center align-item-center p-3">
+        <h4>© Copyright 2023 @All rights reserved by Team Fantasma</h4>
+    </div>
+
+
+
+</div>
+{% endblock %}
