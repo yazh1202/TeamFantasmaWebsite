@@ -61,5 +61,7 @@ def redirect_external():
 
 with app.app_context():
     db.create_all()
+    from database import add_data_to_db
+    add_data_to_db(db)
     app.run(debug=True)
     

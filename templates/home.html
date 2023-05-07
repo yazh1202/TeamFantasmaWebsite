@@ -14,7 +14,7 @@
 
         <div class="row ">
             <div class="tagline mt-5 mb-2">
-                Let's make <span class="tag-text">talent</span> <br><span class="tag-text"> meet</span> opportunity
+                Let's make <span class="tag-text">talent</span> <br><span class="tag-text"> meet</span> opportunities
             </div>
         </div>
 
@@ -46,40 +46,43 @@
 
                         <tbody>
                             <!--Table row-->
+                            {% for job in jobs %}
                             <tr>
                                 <th scope="row">
                                     <div class="card shadow">
                                         <div class="card-body p-3 text-left">
                                             <div class="row">
+                                              
                                                 <div class="col-8">
-                                                    <h5 class="card-title "><b>Company Name</b></h5>
-                                                    <h5 class="card-title">Job Role: Developer</h5>
-                                                    <h5 class="card-title">Location: Banglore</h5>
+                                                    <h5 class="card-title "><b>Company: </b>{{job.company_name}}</h5>
+                                                    <h5 class="card-title"><b>Role: </b>{{job.job_name}}</h5>
+                                                    <h5 class="card-title"><b>Location: </b>{{job.location}}</h5>
 
                                                 </div>
                                                 <div class="col-4 ">
                                                     <div class="row d-flex justify-content-center align-item-center">
-                                                        <a href="#" class="btn-apply btn">Apply here</a>
+                                                        <a href="{{ job.link }}" class="btn-apply btn">Apply here</a>
                                                     </div>
 
                                                     <div class="row d-flex justify-content-center align-item-center">
-                                                        <a class="mt-2 p-2 show-btn" data-toggle="collapse" data-target="#collapseCard" aria-expanded="false" aria-controls="collapseCard" href="#">
-                                                            Show more <span class="aero">⌄</span>
+                                                        <a class="mt-4 p-2 show-btn" data-toggle="collapse" data-target="#{{ job.id }}" aria-expanded="false" aria-controls="collapseCard" href="#">
+                                                            Show more <span class="aero"></span>
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="collapse" id="collapseCard">
+                                                <div class="collapse" id="{{ job.id }}">
                                                     <div class="card p-3 description-text">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quae labore adipisci officiis maxime officia unde minima quod a cumque et nesciunt voluptate sequi nemo modi quo,
-                                                        assumenda error ipsam.
+                                                       {{ job.desc}}
                                                     </div>
                                                 </div>
                                             </div>
+                                       
                                         </div>
 
                                     </div>
                                 </th>
                             </tr>
+                            {% endfor %}
                             <tr>
                                 <th scope="row">
                                     <div class="card shadow">

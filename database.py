@@ -9,7 +9,8 @@ class Job(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     job_name = db.Column(db.String(100), nullable=False)
     company_name = db.Column(db.String(100), nullable=False)
-    link = db.Column(db.String(80), nullable=False)
+    link = db.Column(db.String(80), nullable=True)
+    location = db.Column(db.String(80),nullable=True)
     # updated = db.Column(db.Integer)
     created_at = db.Column(db.DateTime(timezone=True),
                            server_default=func.now())
@@ -38,7 +39,7 @@ def create_job_list(jsob):
 
 # Function to add data to the database from csv
 
-def add_data_to_db(db,joblist):
+def add_data_to_db(db):
     df = pd.read_csv('static\Combined01&02.csv')
     data_size = len(df)
     print(data_size)
@@ -46,10 +47,18 @@ def add_data_to_db(db,joblist):
         company_name = df.loc[i,"employer_name"]
         job_apply_link = df.loc[i,"job_apply_link"]
         job_role =  df.loc[i,"job_title"]
-        job = createJob(job_role=job_role,company_name=company_name,link = job_apply_link)
+        job_desc = df.loc[i,'job_description']
+        city = df.loc[i,'job_city']
+        state = df.loc[i,'job_state']
+        country = df.loc[i,'job_country']
+        job_location = str(f'{city}, {state}, {country}')
+       
+
+        job = createJob(job_role=job_role,location=job_location,company_name=company_name,desc=job_desc,link = job_apply_link)
         db.session.add(job)
         db.session.commit()
 
 # Function to make job instance
-def createJob(job_role, company_name, link):
-    return Job(job_name=job_role, company_name=company_name, link=link)
+def createJob(job_role, company_name,desc,link,location):
+    print(location)
+    return Job(job_name=job_role, company_name=company_name,location=location,desc=desc, link=link)
