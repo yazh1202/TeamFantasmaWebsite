@@ -42,7 +42,7 @@ def createJob(job, company, link):
 @app.route('/apicall')
 def get_data():
     from api import apiCall
-    
+
 @app.route('/api',methods=['POST'])
 def api_handle():
     button_value = request.form['button']
