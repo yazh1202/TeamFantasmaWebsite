@@ -5,3 +5,10 @@ data1.json
 database.db
 data1.json
 .vscode/
+__pycache__/
+__pycache__/
+static/Combined01&02.csv
+static/job.csv
+static/src/
+*.csv~
+*.json
