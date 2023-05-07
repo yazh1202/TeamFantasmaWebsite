@@ -2,49 +2,56 @@
     padding: 0px;
 }
 
-.main-body {
-    height: 1100px;
-    background-color: #f5f9f7;
+.main {
+    height: 1000px;
+    background-color: #F0F0F0;
 }
 
 .navbar {
-    background-color: #338573;
+    background-color: #F0F0F0;
 }
 
 .navbar-brand {
-    color: white;
-    font-family: Poppins;
-    font-size: 70px;
+    color: #000000;
+    font-family: Abril Fatface;
+    font-size: 50px;
     letter-spacing: 2px;
 }
 
 .search-bar {
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     display: flex;
     background-color: #f5f9f7;
 }
 
 .search-box {
-    background-color: #f5f9f7;
-    height: 70px;
-    width: 700px;
+    background-color: #cbc4c4;
     padding: 5px;
     margin: 10px;
-    border-radius: 20px;
+}
+
+.input-box {
+    border-radius: 11.47px;
+    width: 515px;
+    height: 75px;
+    padding: 3px;
+    background-color: #cbc4c4;
+    border-color: #cbc4c4;
 }
 
 .search-btn {
-    background-color: #338573;
-    width: 150px;
-    height: 70px;
+    background-color: #000000;
     margin-top: 10px;
+    margin-bottom: 10px;
     color: whitesmoke;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .tagline {
-    font-size: 70px;
+    font-size: 65px;
     font-weight: bold;
+    margin-left: 256px;
 }
 
 .tag-text {
@@ -52,49 +59,87 @@
 }
 
 .body-tag-text {
-    color: grey;
-    font-size: 30px;
+    color: #000000;
+    font-size: 25px;
     font-family: poppins;
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px;
 }
 
 .result-div {
     background-color: #f5f9f7;
 }
 
-.result-body {
-    margin: 70px;
+.my-custom-scrollbar {
+    position: relative;
     height: 900px;
-    border-radius: 30px;
-    background-color: #f5f9f7;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.result-head {
+    font-size: 70px;
+    font-family: poppins;
+    font-weight: bold;
 }
 
 .card {
     border-radius: 30px;
 }
 
-.company-detail {
-    height: 400px;
+.btn-apply {
     background-color: #338573;
+    color: white;
+    border-radius: 30px;
+    border-radius: 10px;
 }
 
-.company-title {
-    font-size: 70px;
-    font-family: poppins;
+.show-btn {
+    font-size: 25px;
 }
 
-.cmp-img {
-    height: 150px;
-    width: 300px;
+.show-btn:hover {
+    text-decoration: none;
 }
 
-.cmp-img-sp {
-    height: 150px;
-    width: 150px;
+.aero {
+    font-size: 36px;
+}
+
+.description-text {
+    font-size: 20px;
+}
+
+.table-bg {
+    background-color: #d9d9d9;
+    border-radius: 30px;
 }
 
 .footer {
-    background-color: #202020;
-    color: grey;
-    height: 100px;
+    font-family: poppins;
+    color: #c5c6d0;
+    font-size: 15px;
+}
+
+.footer-text {
+    font-size: 30px;
+}
+
+#suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestion {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.suggestion:hover {
+    background-color: #f2f2f2;
 }
