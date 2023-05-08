@@ -2,7 +2,7 @@ import requests
 import json
 from dotenv import load_dotenv
 import os
-def api_call(keywords):
+def api_call(keywords,location):
     load_dotenv()
     url = "https://jsearch.p.rapidapi.com/search"
     
@@ -17,3 +17,23 @@ def api_call(keywords):
     json_data = json.loads(response.text)
     
     return json_data
+
+# CHATGPT API CALLING
+def gpt_api_call(content="Tell me a joke"):
+    url = "https://chatgpt-api6.p.rapidapi.com/standard-gpt"
+
+    payload = { "conversation": [
+            {
+                "role": "user",
+                "content": content
+            }
+        ] }
+    headers = {
+        "content-type": "application/json",
+        "X-RapidAPI-Key": os.getenv('api_key'),
+        "X-RapidAPI-Host": "chatgpt-api6.p.rapidapi.com"
+    }
+
+    response = requests.post(url, json=payload, headers=headers)
+
+    print(response.json())

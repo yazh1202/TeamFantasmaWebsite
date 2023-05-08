@@ -32,13 +32,20 @@
 }
 
 .input-box {
-    border-radius: 11.47px;
-    width: 515px;
+    
+    border-radius: 30px;
+    width: 600px;
     height: 75px;
     padding: 3px;
     background-color: #cbc4c4;
     border-color: #cbc4c4;
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: Poppins;
+    font-size: 20px;
+    color: rgb(112, 100, 100);
+    opacity: 1; /* Firefox */
+  }
 
 .search-btn {
     background-color: #000000;
@@ -51,7 +58,7 @@
 .tagline {
     font-size: 65px;
     font-weight: bold;
-    margin-left: 256px;
+    margin-left: 250px;
 }
 
 .tag-text {
@@ -113,7 +120,7 @@
 }
 
 .description-text {
-    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Poppins;
     font-size: 20px;
 }
 
@@ -145,4 +152,13 @@
 
 .suggestion:hover {
     background-color: #f2f2f2;
+}
+/* input {
+    display: block;
+    width: 400px;
+    padding: 0 20px;
+} */
+p2{
+  font-family: poppins;
+  font-family: 26px;
 }

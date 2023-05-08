@@ -19,16 +19,19 @@
         </div>
 
         <div class="row align-item-center justify-content-center">
-            <div class="body-tag-text ">
-                Hand-picked opportunities to work from home, remotely, freelance, <br>full-time, part-time, contract and internships.
+            <div class="body-tag-text">
+        
+               <p2><b> Find jobs that matches your skills, challenges your abilities <br> provides you opportunities for growth </p2></b>     
             </div>
         </div>
 
         <!--Search bar starts-->
-        <div class="row d-flex align-item-center justify-content-center">
-            <div class="search-bar">
-                <input type="text" class="input-group p-2 input-box mt-1 mb-1" placeholder="Search here">
-                <button class="btn search-btn btn-lg m-1 ml-2">Search</button>
+        <div class="row align-item-center justify-content-center">
+            <div class="search-bar d-flex">  
+                <form action = "{{ url_for('search_results') }} " method = "GET">
+                    <input type="text" class="input-group p-2 input-box mt-1 mb-1" placeholder="Search here" name="query">
+                    <!-- <button type = "submit" class="btn search-btn btn-lg m-1 ml-2 ">Search</button> -->
+                </form>  
             </div>
         </div>
         <!--Search bar ends-->
@@ -55,7 +58,7 @@
                                               
                                                 <div class="col-8">
                                                     <h5 class="card-title "><b>Company: </b>{{job.company_name}}</h5>
-                                                    <h5 class="card-title"><b>Role: </b>{{job.job_name}}</h5>
+                                                    <h5 class="card-title"><b>Role: </b>{{job.job_role}}</h5>
                                                     <h5 class="card-title"><b>Location: </b>{{job.location}}</h5>
 
                                                 </div>
@@ -71,8 +74,18 @@
                                                     </div>
                                                 </div>
                                                 <div class="collapse" id="{{ job.id }}">
-                                                    <div class="card p-3 description-text">
-                                                       {{ job.desc}}
+                                                    <div class="card p-3">
+                                                     <div class = "card-body"> 
+                                                            <style>
+                                                                p {
+                                                                    white-space: pre-line;
+                                                                    font-family :"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                                                                    font-size: 19px;
+                                                                }
+                                                            </style>
+                                                            <p>{{ job.desc}}</p> </div>
+
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -83,90 +96,6 @@
                                 </th>
                             </tr>
                             {% endfor %}
-                            <tr>
-                                <th scope="row">
-                                    <div class="card shadow">
-                                        <div class="card-body p-3 text-left">
-                                            <h5 class="card-title">Job Role</h5>
-                                            <h5 class="card-title">Company Name</h5>
-                                            <h5 class="card-title"><a href="#">Apply here</a></h5>
-                                        </div>
-
-                                    </div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="card shadow">
-                                        <div class="card-body p-3 text-left">
-                                            <h5 class="card-title">Job Role</h5>
-                                            <h5 class="card-title">Company Name</h5>
-                                            <h5 class="card-title"><a href="#">Apply here</a></h5>
-                                        </div>
-
-                                    </div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="card shadow">
-                                        <div class="card-body p-3 text-left">
-                                            <h5 class="card-title">Job Role</h5>
-                                            <h5 class="card-title">Company Name</h5>
-                                            <h5 class="card-title"><a href="#">Apply here</a></h5>
-                                        </div>
-
-                                    </div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="card shadow">
-                                        <div class="card-body p-3 text-left">
-                                            <h5 class="card-title">Job Role</h5>
-                                            <h5 class="card-title">Company Name</h5>
-                                            <h5 class="card-title"><a href="#">Apply here</a></h5>
-                                        </div>
-
-                                    </div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="card shadow">
-                                        <div class="card-body p-3 text-left">
-                                            <h5 class="card-title">Job Role</h5>
-                                            <h5 class="card-title">Company Name</h5>
-                                            <h5 class="card-title"><a href="#">Apply here</a></h5>
-                                        </div>
-
-                                    </div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="card shadow">
-                                        <div class="card-body p-3 text-left">
-                                            <h5 class="card-title">Job Role</h5>
-                                            <h5 class="card-title">Company Name</h5>
-                                            <h5 class="card-title"><a href="#">Apply here</a></h5>
-                                        </div>
-
-                                    </div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div class="card shadow">
-                                        <div class="card-body p-3 text-left">
-                                            <h5 class="card-title">Job Role</h5>
-                                            <h5 class="card-title">Company Name</h5>
-                                            <h5 class="card-title"><a href="#">Apply here</a></h5>
-                                        </div>
-
-                                    </div>
-                                </th>
-                            </tr>
 
                         </tbody>
                     </table>
@@ -182,7 +111,7 @@
 
     <div class="col-12 bg-dark  p-3 footer">
         <span class="footer-text p-3">
-            © Copyright 2023 Team Fantasma
+            <b>Created by Team Fantasma for the Hack 4 Community Hackathon</b>
         </span>
     </div>
 </div>
