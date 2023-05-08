@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="../static/css/style.css">
     <script src="../static/css/js/script.js"></script>
+    <link rel="icon" href="../static/src/Unghost Logo1.png">
     <title>{% block title %}Home{% endblock %}</title>
     <link rel="shortcut icon" type="image/png" href="../static/assets/images/favicon.png">
 </head>
 
 <body>
-
+    <!-- <style>
+        body {
+          /* background-image: url('../static/src/Unghost Logo1.png'); */
+        }
+        </style> -->
     <div class="container-fluid vh-100">{% block content %} {% endblock %}</div>
     <script type="text/javascript " src="{{ url_for( 'static',filename='script.js' )}} ">
     </script>

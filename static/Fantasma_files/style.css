@@ -1,9 +1,7 @@
 .container-fluid {
     padding: 0px;
 }
-body{
-    background-image: url("static\src\World Map.svg");
-}
+
 .main {
     height: 1000px;
     background-color: #F0F0F0;
@@ -16,12 +14,8 @@ body{
 .navbar-brand {
     color: #000000;
     font-family: Abril Fatface;
-    font-size: 70px;
+    font-size: 50px;
     letter-spacing: 2px;
-}
-.navbar-brand a{
-    text-decoration: none;
-    color: black;
 }
 
 .search-bar {
@@ -38,20 +32,13 @@ body{
 }
 
 .input-box {
-    
-    border-radius: 30px;
-    width: 600px;
+    border-radius: 11.47px;
+    width: 515px;
     height: 75px;
     padding: 3px;
     background-color: #cbc4c4;
     border-color: #cbc4c4;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    font-family: Poppins;
-    font-size: 20px;
-    color: rgb(112, 100, 100);
-    opacity: 1; /* Firefox */
-  }
 
 .search-btn {
     background-color: #000000;
@@ -64,7 +51,7 @@ body{
 .tagline {
     font-size: 65px;
     font-weight: bold;
-    margin-left: 250px;
+    margin-left: 256px;
 }
 
 .tag-text {
@@ -126,7 +113,7 @@ body{
 }
 
 .description-text {
-    font-family: Poppins;
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
 }
 
@@ -159,98 +146,8 @@ body{
 .suggestion:hover {
     background-color: #f2f2f2;
 }
-/* input {
+input {
     display: block;
     width: 400px;
     padding: 0 20px;
-} */
-p2{
-  font-family: poppins;
-  font-family: 26px;
-}
-/* autocmplete style starts */
-
-.autocomplete {
-    position: relative;
-    display: inline-block;
-}
-
-input {
-    border: 1px solid transparent;
-    background-color: #f1f1f1;
-    padding: 10px;
-    font-size: 16px;
-}
-
-input[type=text] {
-    background-color: #f1f1f1;
-    width: 100%;
-}
-
-input[type=submit] {
-    background-color: DodgerBlue;
-    color: #fff;
-}
-
-.autocomplete-items {
-    position: absolute;
-    border: 1px solid #d4d4d4;
-    border-bottom: none;
-    border-top: none;
-    z-index: 99;
-    /* position the autocomplete items to be the same width as the container:/ */
-    top: 100%;
-    left: 0;
-    right: 0;
-}
-
-.autocomplete-items div {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    border-bottom: 1px solid #d4d4d4;
-}
-
-.autocomplete-items div:hover {
-    /* /when hovering an item:/ */
-    background-color: #e9e9e9;
-}
-
-.autocomplete-active {
-    /* /when navigating through the items using the arrow keys:/ */
-    background-color: DodgerBlue !important;
-    color: #ffffff;
-}
-
-
-/* Autocomplete style ends */
-.home-tagline {
-    font-size: 100px;
-    font-weight: bold;
-}
-
-.second-tagline {
-    font-family: poppins;
-    font-size: 30px;
-}
-
-.input-group {
-    border-radius: 30px;
-    border-color: #338573;
-    border-width: 5px;
-    width: 700px;
-}
-
-.home-search-btn {
-    background-color: black;
-    color: white;
-    border-radius: 30px;
-    width: 250px;
-    height: 80px;
-    margin-top: 45px;
-    margin-left: 20px;
-}
-
-.search-div {
-    width: 100%;
 }

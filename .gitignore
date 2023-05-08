@@ -12,3 +12,5 @@ static/job.csv
 static/src/
 *.csv~
 *.json
+Merge.py
+*.csv
