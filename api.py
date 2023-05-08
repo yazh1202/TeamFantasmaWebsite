@@ -2,7 +2,7 @@ import requests
 import json
 from dotenv import load_dotenv
 import os
-def api_call(keywords,location):
+def api_call(keywords):
     load_dotenv()
     url = "https://jsearch.p.rapidapi.com/search"
     

@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% block title %} Fantasma {% endblock %} {% block content %}
-<nav class="navbar mt-1">
+<nav class="navbar mt-1 shadow">
     <div class="container-fluid">
         <h3 class="navbar-brand">Unghost</h3>
     </div>
@@ -20,19 +20,22 @@
 
         <div class="row align-item-center justify-content-center">
             <div class="body-tag-text">
-        
-               <p2><b> Find jobs that matches your skills, challenges your abilities <br> provides you opportunities for growth </p2></b>     
+
+                <p2><b> Find jobs that matches your skills, challenges your abilities <br> and provides you opportunities
+                        for growth </p2></b>
             </div>
         </div>
 
         <!--Search bar starts-->
         <div class="row align-item-center justify-content-center">
-            <div class="search-bar d-flex">  
-                <form action = "{{ url_for('search_results') }} " method = "GET">
-                    <input type="text" class="input-group p-2 input-box mt-1 mb-1" placeholder="Search here" name="query">
-                    <!-- <button type = "submit" class="btn search-btn btn-lg m-1 ml-2 ">Search</button> -->
-                </form>  
+         
+            <div class="search-bar">
+                <form action="{{ url_for('search_results') }} " method="GET" >
+                <input type="text" id="myInput" class="input-group p-2 input-box mt-1 mb-1" placeholder="Search here"
+                     name="query" style="width:650px;">
+            </form>
             </div>
+           
         </div>
         <!--Search bar ends-->
 
@@ -55,7 +58,7 @@
                                     <div class="card shadow">
                                         <div class="card-body p-3 text-left">
                                             <div class="row">
-                                              
+
                                                 <div class="col-8">
                                                     <h5 class="card-title "><b>Company: </b>{{job.company_name}}</h5>
                                                     <h5 class="card-title"><b>Role: </b>{{job.job_role}}</h5>
@@ -64,32 +67,35 @@
                                                 </div>
                                                 <div class="col-4 ">
                                                     <div class="row d-flex justify-content-center align-item-center">
-                                                        <a href="{{ job.link }}" class="btn-apply btn">Apply here</a>
+                                                        <a href="{{ job.link }}" target="_blank" class="btn-apply btn">Apply here</a>
                                                     </div>
 
                                                     <div class="row d-flex justify-content-center align-item-center">
-                                                        <a class="mt-4 p-2 show-btn" data-toggle="collapse" data-target="#{{ job.id }}" aria-expanded="false" aria-controls="collapseCard" href="#">
+                                                        <a class="mt-4 p-2 show-btn" data-toggle="collapse"
+                                                            data-target="#{{ job.id }}" aria-expanded="false"
+                                                            aria-controls="collapseCard" href="#">
                                                             Show more <span class="aero"></span>
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="collapse" id="{{ job.id }}">
                                                     <div class="card p-3">
-                                                     <div class = "card-body"> 
+                                                        <div class="card-body">
                                                             <style>
                                                                 p {
                                                                     white-space: pre-line;
-                                                                    font-family :"Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                                                                    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
                                                                     font-size: 19px;
                                                                 }
                                                             </style>
-                                                            <p>{{ job.desc}}</p> </div>
+                                                            <p>{{ job.desc}}</p>
+                                                        </div>
 
 
                                                     </div>
                                                 </div>
                                             </div>
-                                       
+
                                         </div>
 
                                     </div>

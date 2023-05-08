@@ -72,7 +72,8 @@ def replace_full_stops(string):
 def updateDatabase():
     mainData = Job.query.all()
     for row in mainData:
-        row.desc = replace_full_stops(row.desc)
+        row.location = row.location.replace("nan"," ")
+        row.location = row.location.replace(","," ")
         db.session.commit()
 
 # Function to make job instance

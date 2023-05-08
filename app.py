@@ -1,3 +1,4 @@
+# Imports
 import os
 import json
 from flask import Flask, render_template, request, url_for, redirect
@@ -6,8 +7,6 @@ import datetime
 from sqlalchemy.sql import func
 import pandas as pd
 from database import db,Job,create_job_list
-
-#Things 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
@@ -27,7 +26,6 @@ db.init_app(app)
 def index():
     jobs = Job.query.all()
     return render_template('home.html', jobs=jobs, utc_dt=datetime.datetime.utcnow())
-
 
 @app.route('/search',methods=['GET'])
 def search_results():
@@ -84,7 +82,7 @@ def init_db():
 with app.app_context():
     from database import updateDatabase,create_job_list,add_data_to_db
     add_data_to_db(db)
-  
+    updateDatabase()
     app.run(debug=True)
 if __name__=="main":
     init_db()
