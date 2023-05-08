@@ -26,14 +26,20 @@
 
         <!--Search bar starts-->
         <div class="row d-flex align-item-center justify-content-center">
-            <div class="search-bar">
-                <input type="text" class="input-group p-2 input-box mt-1 mb-1" placeholder="Search here">
-                <button class="btn search-btn btn-lg m-1 ml-2">Search</button>
-            </div>
+            <form action="" autocomplete="off">
+                <div class="search-bar">
+                    <div class="autocomplete" style="width:700px;">
+                        <input type="text" id="myInput" name="myCountry" class="input-group p-2 input-box mt-1 mb-1" placeholder="Search here">
+                        <!-- <button class="btn search-btn btn-lg m-1 ml-2">Search</button> -->
+                    </div>
+                </div>
+            </form>
         </div>
         <!--Search bar ends-->
 
-
+        <script>
+            autocomplete(document.getElementById("myInput"), countries);
+        </script>
     </div>
 
     <!--Div of Result Body-->
@@ -69,7 +75,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="collapse" id="collapseCard">
-                                                    <div class="card p-3 description-text">
+                                                    <div class="card p-3 ">
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quae labore adipisci officiis maxime officia unde minima quod a cumque et nesciunt voluptate sequi nemo modi quo,
                                                         assumenda error ipsam.
                                                     </div>
