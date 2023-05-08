@@ -19,6 +19,10 @@ body{
     font-size: 70px;
     letter-spacing: 2px;
 }
+.navbar-brand a{
+    text-decoration: none;
+    color: black;
+}
 
 .search-bar {
     margin-top: 20px;
