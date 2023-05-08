@@ -1,0 +1,153 @@
+.container-fluid {
+    padding: 0px;
+}
+
+.main {
+    height: 1000px;
+    background-color: #F0F0F0;
+}
+
+.navbar {
+    background-color: #F0F0F0;
+}
+
+.navbar-brand {
+    color: #000000;
+    font-family: Abril Fatface;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.search-bar {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    background-color: #f5f9f7;
+}
+
+.search-box {
+    background-color: #cbc4c4;
+    padding: 5px;
+    margin: 10px;
+}
+
+.input-box {
+    border-radius: 11.47px;
+    width: 515px;
+    height: 75px;
+    padding: 3px;
+    background-color: #cbc4c4;
+    border-color: #cbc4c4;
+}
+
+.search-btn {
+    background-color: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+.tagline {
+    font-size: 65px;
+    font-weight: bold;
+    margin-left: 256px;
+}
+
+.tag-text {
+    color: #338573;
+}
+
+.body-tag-text {
+    color: #000000;
+    font-size: 25px;
+    font-family: poppins;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.result-div {
+    background-color: #f5f9f7;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 900px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.result-head {
+    font-size: 70px;
+    font-family: poppins;
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 30px;
+}
+
+.btn-apply {
+    background-color: #338573;
+    color: white;
+    border-radius: 30px;
+    border-radius: 10px;
+}
+
+.show-btn {
+    
+    font-size: 19px;
+}
+
+.show-btn:hover {
+    text-decoration: none;
+}
+/* Create a CSS class with good font family and a title font size */
+.aero {
+    font-family: Times New Roman;
+    font-size: 0px;
+}
+
+.description-text {
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.table-bg {
+    background-color: #d9d9d9;
+    border-radius: 30px;
+}
+
+.footer {
+    font-family: poppins;
+    color: #c5c6d0;
+    font-size: 15px;
+}
+
+.footer-text {
+    font-size: 30px;
+}
+
+#suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestion {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.suggestion:hover {
+    background-color: #f2f2f2;
+}
+input {
+    display: block;
+    width: 400px;
+    padding: 0 20px;
+}
