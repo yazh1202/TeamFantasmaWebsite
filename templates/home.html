@@ -27,19 +27,21 @@
         <!--Search bar starts-->
         <div class="row d-flex align-item-center justify-content-center">
             <form action="" autocomplete="off">
-                <div class="search-bar">
-                    <div class="autocomplete" style="width:700px;">
-                        <input type="text" id="myInput" name="myCountry" class="input-group p-2 input-box mt-1 mb-1" placeholder="Search here">
-                        <!-- <button class="btn search-btn btn-lg m-1 ml-2">Search</button> -->
-                    </div>
+                <div class="search-bar autocomplete">
+                    <!-- <div class="autocomplete" style="width:600px;"> -->
+                    <input type="text" id="myInput" name="myCountry" class="input-group p-2 input-box mt-1 mb-1" placeholder="Search here">
+
+                    <!-- Script for autocomplete starts-->
+                    <script>
+                        autocomplete(document.getElementById("myInput"), countries);
+                    </script>
+                    <!-- Script for autocmplete ends -->
+
+                    <!-- </div> -->
                 </div>
             </form>
         </div>
         <!--Search bar ends-->
-
-        <script>
-            autocomplete(document.getElementById("myInput"), countries);
-        </script>
     </div>
 
     <!--Div of Result Body-->
