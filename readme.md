@@ -6,7 +6,7 @@
   
 
 Create a Search engine for searching job opportunities in specific domains.  
-Use case - Whenever a user searches for a job on the page , it will scrap the top MNC's official Job portal for available opportunities that are related to the keywords searched.Also provide with the apply link.
+Use case - Whenever a user searches for a job on the page , it will call an API for available opportunities that are related to the keywords searched and provide the user with the application link.
 
 ## Team Members
 **1. Aman Netam 6th Semester CSE**
