@@ -6,7 +6,7 @@ def api_call(keywords):
     load_dotenv()
     url = "https://jsearch.p.rapidapi.com/search"
     
-    querystring = {"query":keywords,"page":"1","num_pages":"5"}
+    querystring = {"query":keywords,"page":"1","num_pages":"20"}
 
     headers = {
         "X-RapidAPI-Key": os.getenv('api_key'),

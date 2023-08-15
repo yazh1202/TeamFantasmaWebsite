@@ -45,10 +45,10 @@ def create_job_list(jsob):
     return joblist
 
 
-# Function to add data to the database from1 csv
+# Function to add data to the database from a csv file
 
 def add_data_to_db(db):
-    df = pd.read_csv('static\CSV_DATA4.csv')
+    df = pd.read_csv('static/CSV_DATA4.csv')
     data_size = len(df)
     for i in range(0,data_size):
         company_name = df.loc[i,"employer_name"]
@@ -65,9 +65,11 @@ def add_data_to_db(db):
         job = createJob(lc = job_location,desc = job_desc,id=job_id,role=job_role,company=company_name,link = job_apply_link)
         db.session.merge(job)
         db.session.commit()
+
 # Helper method to replace the full stops with linebreaks
 def replace_full_stops(string):
     return string.replace('<br>', '\n')
+
 # Function  to update db
 def updateDatabase():
     mainData = Job.query.all()

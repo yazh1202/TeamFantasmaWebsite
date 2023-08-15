@@ -43,7 +43,7 @@ def search_results():
         print(search_words)
         # Retrieve the matching records
         results = db_query.all()
-        print(len(results))
+        # print(len(results))
         if len(results)==0:
             app.logger.info("API CALLED")
             from api import api_call

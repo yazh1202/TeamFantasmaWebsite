@@ -1,0 +1,34 @@
+{% extends "base.html" %} {% block title %} Fantasma {% endblock %} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <div class="row justify-content-center align-item-center    ">
+                <div class="home-tagline mt-5 mb-2 text-center">
+                    Let's make <span class="tag-text">talent</span> <span class="tag-text"> meet</span> <br> opportunity
+                </div>
+            </div>
+
+            <div class="row align-item-center justify-content-center">
+                <div class="second-tagline mt-4">
+                    Hand-picked opportunities to work from home, remotely, freelance, full-time, part-time,<br> contract and internships.
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center">
+                <div class="d-flex search-div">
+                    <form action="{{ url_for('search_results') }} " method="GET" >
+                        <input type="text" id="myInput" class="input-group p-2 input-box mt-1 mb-1" placeholder="Search here"
+                             name="query" style="width:650px;">
+                    </form>
+                   
+                    <button class="home-search-btn ">Search</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
