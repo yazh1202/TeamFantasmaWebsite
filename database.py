@@ -17,6 +17,7 @@ class Job(db.Model):
 
     def __repr__(self):
         return f'<Job {self.job_role}>'
+        
 # Function to create the joblist from json 
 def create_job_list(jsob):
     joblist = list()
@@ -48,7 +49,7 @@ def create_job_list(jsob):
 # Function to add data to the database from a csv file
 
 def add_data_to_db(db):
-    df = pd.read_csv('static/CSV_DATA4.csv')
+    # df = pd.read_csv('static/CSV_DATA4.csv')
     data_size = len(df)
     for i in range(0,data_size):
         company_name = df.loc[i,"employer_name"]
@@ -81,41 +82,3 @@ def updateDatabase():
 # Function to make job instance
 def createJob(id,role, company,lc,desc,link):
     return Job(id = id,job_role=role, company_name=company,location=lc,desc=desc, link=link)
-query = '''Find the keywords a person searching for job would look for in the following text and return it in a python dictionary:Hi Jobseeker ,
-
-I hope you are doing well!
-
-We have an opportunity for Python Developer with one of our clients for Irving, TX (Day 1 onsite)
-
-Please see the job details below and let me know if you would be interested in this role
-
-
-If interested, please send me a copy of your resume, contact details, availability, and a good time to connect with you
-
-
-Title Python Developer
-
-Location: Irving, TX (Day 1 onsite)
-
-Terms: Fulltime
-
-Job Details
-
-Technical/Functional Skills
-• Advanced Python knowledge with minimum 4-5 years relevant experience
-
-• Knowledge on REST API using python Flask, integration with Mongodb
-
-• Basic knowledge on unix commands
-
-
-Priyanka tiwari
-
-Extend Information System Inc
-
-Phone: (703) 956-1120
-
-Email: priyanka1@extendinfosys
-com
-
-44258 Mercure Circle, UNIT 102 A, Sterling VA, USA 20166 '''

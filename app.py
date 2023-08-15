@@ -81,7 +81,7 @@ def init_db():
     db.create_all()        
 with app.app_context():
     from database import updateDatabase,create_job_list,add_data_to_db
-    add_data_to_db(db)
+    # add_data_to_db(db)
     updateDatabase()
     app.run(debug=True)
 if __name__=="main":
