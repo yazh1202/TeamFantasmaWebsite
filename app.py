@@ -16,9 +16,11 @@ from sqlalchemy.sql.expression import and_
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
+app.debug = True
 app.config['SQLALCHEMY_DATABASE_URI'] =\
     'sqlite:///' + os.path.join(basedir, 'database.db')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+# For  Debugging
 
 db.init_app(app)
 
@@ -78,11 +80,15 @@ def redirect_external():
     return redirect(external_url)
 
 def init_db():
-    db.create_all()        
-with app.app_context():
-    from database import updateDatabase,create_job_list,add_data_to_db
-    # add_data_to_db(db)
-    updateDatabase()
-    app.run(debug=True)
-if __name__=="main":
+    with app.app_context():
+        from database import updateDatabase,create_job_list,add_data_to_db
+        add_data_to_db(db)
+        updateDatabase()
+        db.create_all()        
+        print("DB Created ")
+
+        
+if __name__=="__main__":
     init_db()
+    app.run(debug=True)
+    

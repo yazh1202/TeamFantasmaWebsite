@@ -13,4 +13,3 @@ static/src/
 *.csv~
 *.json
 Merge.py
-*.csv

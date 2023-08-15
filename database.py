@@ -49,7 +49,7 @@ def create_job_list(jsob):
 # Function to add data to the database from a csv file
 
 def add_data_to_db(db):
-    # df = pd.read_csv('static/CSV_DATA4.csv')
+    df = pd.read_csv('static/resources/start_data.csv')
     data_size = len(df)
     for i in range(0,data_size):
         company_name = df.loc[i,"employer_name"]
